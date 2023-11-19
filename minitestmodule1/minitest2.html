@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mini Test 2</title>
+</head>
+<body>
+<script>
+    // Khai báo mảng
+
+     let arr1 = [];
+     let number1  = +prompt("Nhập số phần tử của mảng");
+     for (let i = 1; i <= number1; i++) {
+        arr1[i] = +prompt("Nhâp phần tử thứ "+ i);
+    }
+
+    // Bài 1:
+
+    for (const number1 of arr1) {
+            if (arr1[number1] % 2 === 0){
+                document.write(arr1[number1]);
+            }
+    }
+
+    // Bài 2:
+
+    // let count = 0;
+    // for (let i = 1; i <= number1; i++) {
+    //     arr1[i] = prompt("Nhâp phần tử thứ "+ i);
+    // }
+    // for (let i = 1; i <= number1 ; i++) {
+    //     if (arr1[i] === "a"){
+    //         count++;
+    //     }
+    // }
+    // alert("Có "+ count + " phần tử a vừa được nhập vào" );
+
+    // Bài 3:
+
+    function isPrimeNumber(n){
+        if(n < 2){
+            return false;
+        }else{
+            for (let i = 2; i < n; i++) {
+                if(n % i === 0){
+                    return false;
+                }
+            }
+            return true;
+        }
+    }
+    let result = 0;
+    for (let i = 1; i <= number1; i++) {
+        if(isPrimeNumber(arr1[i])){
+            result += Number(arr1[i]);
+        }
+    }
+    document.write("Tổng các số nguyên tố vừa nhập là:" + result);
+
+
+    //  Bài 4
+
+    // let result2 = 0;
+    // for (let i = 0; i < 500; i++) {
+    //         if(isPrimeNumber(i)){
+    //             result2 += i;
+    //         }
+    // }
+    // document.write("Tổng các số nguyên tố nhỏ hơn 500 là:"+ result2 );
+
+</script>
+</body>
+</html>
