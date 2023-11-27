@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Minitest3 </title>
+</head>
+<body>
+<script>
+
+    // Bài 1:
+    // function factorial(x){
+    //     let resutl = 1;
+    //     if(x <= 0){
+    //         alert("Phải nhập số lớn hơn 0");
+    //     }else {
+    //         for (let i = 1; i <= x; i++) {
+    //             resutl = resutl * i;
+    //         }
+    //     }
+    //     return resutl;
+    // }
+    // let x = prompt("Nhập vào số nguyên dương");
+    // console.log(factorial(x));
+
+    // Bài 2:
+    // function a(n){
+    //     let result = [];
+    //     let count = 0;
+    //     while (count < 15){
+    //      if (n % 3 == 0){
+    //          result.push(n);
+    //          count++
+    //      }
+    //      n++;
+    //     }
+    //     return result;
+    // }
+    // let n = prompt("Nhập n");
+    // document.write(a(n));
+
+    // Bài 3:
+    function newArr(arr){
+        let newArr = [];
+        for (const i in arr) {
+            if(arr[i] > 0){
+                newArr.push(arr[i]);
+            }
+        }
+        return newArr;
+    }
+    let arr = [1, 4, -2 , 6,-4, 7]
+    document.write(newArr(arr));
+</script>
+</body>
+</html>
