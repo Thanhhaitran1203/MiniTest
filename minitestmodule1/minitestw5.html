@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Minitest week 5</title>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+<script>
+    const canvas = document.getElementById("canvas");
+    const ctx = canvas.getContext('2d');
+
+// Bài 1:
+    function delete1(arr, a){
+    let arr1 = [];
+        for (const i in arr) {
+            if (arr[i] !== a){
+                arr1.push(arr[i]);
+            }
+        }
+        return arr1;
+}
+
+// Bài 2
+function avg(x, y, z){
+    let avg = (x + y + z) / 3;
+    let result;
+    if (avg < 5){
+        result = "Không đạt";
+    }else if (avg < 8){
+        result = "Đạt";
+    }else {
+        result = "Tốt";
+    }
+    return result;
+}
+
+// Bài 3
+class Customer{
+    constructor(name, age, point) {
+        this.name = name;
+        this.age = age;
+        this.point = point;
+    }
+    getPromotion(){
+        let promotion;
+        if(this.point > 100){
+            promotion = 5/100;
+        }
+        else promotion = 0;
+        return promotion;
+    }
+}
+let a = new Customer("Hai", "27", "110");
+let b = new Customer("Hai1", "27", "90");
+a.getPromotion();
+b.getPromotion();
+
+// Bài 4
+class Rectangle{
+    constructor(width, height) {
+        this.width = width;
+        this.height = height;
+    }
+    getC(){
+    let c = (this.width + this.height) * 2;
+    return c;
+    }
+    getS(){
+        let s = this.height * this.width;
+    }
+    draw(){
+        ctx.fillStyle = 'red';
+        ctx.fillRect(0,0,this.width,this.height);
+    }
+}
+
+    function isPrimeNumber(n){
+        if(n < 2){
+            return false;
+        }else{
+            for (let i = 2; i < n; i++) {
+                if(n % i === 0){
+                    return false;
+                }
+            }
+            return true;
+        }
+    }
+// Bài 5
+    function getNumberPrime(arr){
+    let count = 0;
+        for (const i in arr) {
+            if (isPrimeNumber(arr[i])){
+                count++
+            }
+        }
+        return count;
+    }
+
+</script>
+</body>
+</html>
